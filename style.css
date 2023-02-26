@@ -1,0 +1,109 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+h1 {
+  color: #4f4f4f;
+}
+
+/* Sign in form */
+form {
+  border: none;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #4f4f4f;
+  box-sizing: border-box;
+  color: #4f4f4f;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #cc0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #cc0000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* New evaluation form */
+form.evaluation {
+  border: none;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #4f4f4f;
+}
+
+select, input[type="number"], input[type="date"], input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #4f4f4f;
+  box-sizing: border-box;
+  color: #4f4f4f;
+  font-size: 16px;
+}
+
+select[multiple] {
+  height: 120px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #4f4f4f;
+  box-sizing: border-box;
+  color: #4f4f4f;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+}

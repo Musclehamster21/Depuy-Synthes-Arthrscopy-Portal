@@ -1,0 +1,47 @@
+<?php
+  // Read products from the JSON file
+  $products_json = file_get_contents('products_list.json');
+  $products = json_decode($products_json, true);
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Select Disposable Items</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Select Capital equipment disposable Items</h1>
+    <form method="post" action="/submit-items">
+      <h2>Product Information</h2>
+      <p>Please select the disposable items you will need for each product, and specify the quantity for each item.</p>
+
+      <h2>Disposable Items</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Select</th>
+            <th>Product SKU</th>
+            <th>Product Description</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($products as $product): ?>
+            <tr>
+              <td><input type="checkbox" name="product_sku[]" value="<?php echo $product['sku']; ?>"></td>
+              <td><?php echo $product['sku']; ?></td>
+              <td><input type="text" name="product_description[]" value=""></td>
+              <td><input type="number" name="product_quantity[]" value=""></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
+      <input type="submit" value="Submit Disposable Items">
+    </form>
+  </body>
+</html>
+
